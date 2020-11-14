@@ -8,15 +8,24 @@ const htmlPlugin=new HtmlWebPackPlugin({
 })
 
 // 向外暴露一个对象
+// webpack只能处理 .js 后缀的文件 。 .png .vue 无法主动处理，所以要配置第三方的loader;
 module.exports={
   mode:"development", //  development  production  模式
   // 在webpack4.x中约定大于配置，默认路径为src->index.js
   plugins:[
     htmlPlugin
-  ]
+  ],
+  module:{ // 匹配第三方的规则
+    rules:[
+      { test: /\.js|jsx$/,
+        use: "babel-loader",
+        exclude: /node_modules/ // 排除项, 千万不能忘记
+       }
+    ]
+  }
 }
 // webpack-dev-server 打包好的main.js在内存中
-// 不行   这是ES6的导出API  与之对应的是 import ** from “标识符”
+// 不行   这是ES6的导出API  与之对应的是 import ** from “标识符” 
 // export default{}
 
 // 那些Node支持
