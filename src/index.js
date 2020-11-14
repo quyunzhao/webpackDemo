@@ -22,7 +22,7 @@ const mydiv=React.createElement("div",null,"这是一个div元素",myh1);
 // 可以使用 babel 来转换这些 js 中的这些标记
 // 注意： 在js中 混合书写类似 HTML 的语法，叫做 JSX 语法  符合 XML 规范的 JS；
 // 注意：JSX 语法的本质，还是在运行是被转换为 React.createElement 形式来执行
-const mytest= <div>aaaaaassa</div>;
+const mytest= <div>这是一个DIV<h1>H1元素</h1></div>;
 
 
 // 3.使用 ReactDOM  将虚拟DOM 渲染到页面上
@@ -30,7 +30,7 @@ const mytest= <div>aaaaaassa</div>;
 // 参数2：指定页面上的容器
 // ReactDOM.render(myh1,"#app")
 // Target container is not a DOM element. 猜测第二个元素为 dom 元素 ，不应该为 选择器
-ReactDOM.render(mydiv,document.getElementById("app"))
+ReactDOM.render(mytest,document.getElementById("app"))
 
 
 // vue中
