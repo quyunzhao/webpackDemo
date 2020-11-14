@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "添加 vue 语法"
+git commit -m "jsx 语法的注意事项"
 
 git push

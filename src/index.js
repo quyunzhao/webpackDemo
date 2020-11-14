@@ -6,14 +6,22 @@ let a = 100;
 let str = "你好，react";
 let title = "2222";
 
-const arr = [1, 22, 55, 98, <h2>这是H2</h2>, <h3>这是H3</h3>];
+const arr = [
+  1,
+  22,
+  55,
+  98,
+  <h2 key={"ddd"}>这是H2</h2>,
+  <h3 key={"sdfasd"}>这是H3</h3>,
+];
 
 const arrStr = ["小米", "华为", "苹果", "三星"];
 
 // 方案一
 const phoneArr = [];
+// 注意 react 中需要把 key 值添加给 forEach 或者 map 或 for 循环直接控制的元素
 arrStr.forEach((item) => {
-  const temp = <h5>{item}</h5>;
+  const temp = <h5 key={item}>{item}</h5>;
   phoneArr.push(temp);
 });
 
@@ -38,8 +46,14 @@ ReactDOM.render(
     {phoneArr}
     <hr />
     {arrStr.map((item) => (
-      <h3>{item}</h3>
+      <div key={item}>
+        <h3>{item}</h3>
+      </div>
     ))}
+    <hr />
+    <p className="myp">这里是一段文本</p>
+    <hr />
+    <label htmlFor="ddd">label文字</label>
     <hr />
   </div>,
   document.getElementById("app")
