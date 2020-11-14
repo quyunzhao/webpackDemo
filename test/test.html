@@ -12,7 +12,10 @@
       <input type="text" v-model="name" />
       <button @click="add">添加</button>
       <ul>
-        <li v-for="item in list">
+        <!-- 添加key -->
+        <!-- :key="item.id" -->
+        <li v-for="item in list" :key="item.id">
+          <input type="checkbox" />
           编号：{{item.id}}----姓名：{{item.name}}
           <button @click="del">删除</button>
         </li>
@@ -41,14 +44,18 @@
         },
         methods: {
           add() {
+            // 为空不能添加
+            if (this.name === "") {
+              return;
+            }
             var user = {
               id: this.list.length,
               name: this.name,
             };
             this.name = "";
-            this.list.push(user);
+            this.list.unshift(user);
           },
-          del(id) {
+          del() {
             console.log(id);
           },
         },
