@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "jsx 语法的注意事项"
+git commit -m "React 创建组件"
 
 git push
