@@ -18,7 +18,10 @@ const mydiv=React.createElement("div",null,"这是一个div元素",myh1);
 
 // 渲染 页面上的 DOM 元素最好的方式就是写 HTML
 
-// 
+// 注意在js文件中默认不能书写 这种类似HTML的标记 否则打包会失败
+// 可以使用 babel 来转换这些 js 中的这些标记
+// 注意： 在js中 混合书写类似 HTML 的语法，叫做 JSX 语法  符合 XML 规范的 JS；
+// 注意：JSX 语法的本质，还是在运行是被转换为 React.createElement 形式来执行
 const mytest= <div>aaaaaassa</div>;
 
 
