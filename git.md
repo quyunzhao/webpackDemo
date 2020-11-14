@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "安装 babel"
+git commit -m "学习 JSX 语法"
 
 git push
