@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "class 继承父类 super 函数说明"
+git commit -m "class 关键字创建 React 组件"
 
 git push
