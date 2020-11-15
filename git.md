@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "第二种创建组件的方式"
+git commit -m "class 基本使用"
 
 git push
