@@ -33,8 +33,13 @@ console.log(a1);
 a1.seyHello();
 
 // 子类 中国人
-class Chinese extends Person {}
+class Chinese extends Person {
+  constructor(name, age, IDNumber) {
+    super(name, age);
+    this.IDNumber = IDNumber;
+  }
+}
 
-const a2 = new Chinese("小红", 21);
+const a2 = new Chinese("小红", 21, "61458***********");
 console.log(a2);
 a2.seyHello();
