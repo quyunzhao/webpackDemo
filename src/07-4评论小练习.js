@@ -1,5 +1,17 @@
 import React from "react";
 
+// 使用 function 定义普通的无状态组件
+// 子组件
+function CmtItem(props) {
+  return (
+    <div>
+      <h1>评论人：{props.user}</h1>
+      <h2>评论内容：{props.content}</h2>
+      <hr />
+    </div>
+  );
+}
+
 // 定义父组件
 class CmtList extends React.Component {
   constructor() {
@@ -22,11 +34,7 @@ class CmtList extends React.Component {
       <div>
         <h1>这里是评论列表区</h1>
         {this.state.commentList.map((item) => (
-          <div key={item.id}>
-            <h1>评论人：{item.user}</h1>
-            <h2>评论内容：{item.content}</h2>
-            <hr />
-          </div>
+          <CmtItem key={item.id} {...item}></CmtItem>
         ))}
       </div>
     );
