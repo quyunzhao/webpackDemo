@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "class 组件 this.state 值可读可写"
+git commit -m "评论区实现小练习"
 
 git push
