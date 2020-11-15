@@ -25,6 +25,9 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".jsx", ".json"], // 表示这几个文件的后缀名 顺序很重要
+    alias: {
+      "@": path.join(__dirname, "./src"), //这样 @ 符合就表示 项目根目录下的 src 的这一层路径
+    },
   },
 };
 // webpack-dev-server 打包好的main.js在内存中

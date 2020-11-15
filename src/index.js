@@ -4,7 +4,10 @@ import ReactDOM from "react-dom"; // 把创建好的 组件 和 虚拟DOM  放�
 
 // 导入 Hello 组件
 // 默认没有做配置的话，不能省略后缀名
-import Hello from "./components/Hello";
+// import Hello from "./components/Hello";
+// 配置根目录
+// 这里的 @ 表示项目根目录下的src
+import Hello from "@/components/Hello";
 const user = {
   name: "小明",
   age: "22",

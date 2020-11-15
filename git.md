@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "省略后缀名"
+git commit -m "webpack 设置根目录"
 
 git push
