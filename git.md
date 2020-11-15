@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "第二种 创建组件的方式"
+git commit -m "省略后缀名"
 
 git push

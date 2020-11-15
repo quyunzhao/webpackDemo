@@ -4,7 +4,7 @@ import ReactDOM from "react-dom"; // 把创建好的 组件 和 虚拟DOM  放�
 
 // 导入 Hello 组件
 // 默认没有做配置的话，不能省略后缀名
-import Hello from "./components/Hello.jsx";
+import Hello from "./components/Hello";
 const user = {
   name: "小明",
   age: "22",
@@ -21,7 +21,7 @@ ReactDOM.render(
     <hr />
     {/* 直接把 组件 的 名称 ，以标签的形式丢到页面上 */}
     {/* <Hello name={user.name} age={user.age} area={user.area}></Hello> */}
-    <hr />
+    {/* <hr /> */}
     {/* es6 展开运算符 ... */}
     <Hello {...user}></Hello>
   </div>,

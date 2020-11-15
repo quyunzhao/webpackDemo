@@ -23,6 +23,9 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: [".js", ".jsx", ".json"], // 表示这几个文件的后缀名 顺序很重要
+  },
 };
 // webpack-dev-server 打包好的main.js在内存中
 // 不行   这是ES6的导出API  与之对应的是 import ** from “标识符”
