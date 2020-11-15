@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "class 关键字创建 React 组件"
+git commit -m "class 组件 this.state 值可读可写"
 
 git push
