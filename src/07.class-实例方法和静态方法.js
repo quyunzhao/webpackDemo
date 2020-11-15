@@ -1,4 +1,3 @@
-// console.log("okkkkkk");
 function Person(name, age) {
   this.age = age;
   this.name = name;
@@ -7,17 +6,24 @@ function Person(name, age) {
 // info 属性，直接挂载给了构造函数，所以它是 【静态属性】
 Person.info = "这是实例对象的描述";
 
+// 【实例方法】
+Person.prototype.say = function() {
+  console.log("hello:这是 Person 的实例方法");
+};
+
+// 【静态方法】
+Person.show = function() {
+  console.log("这是 Person 的静态方法");
+};
+
 const p1 = new Person("王五", 26);
 console.log(p1);
 
-// 通过 new 出来的实例，访问到的属性 称为 【实例属性】
-console.log(p1.name); // 实例属性
-console.log(p1.age); // 实例属性
-// 【静态属性】 通过 构造函数 直接访问到的属性，叫【静态属性】
-console.log(Person.info);
+p1.say();
+Person.show();
 
 // ~~~~~~~~~~~~~~~~~~~~~分割线~~~~~~~~~~~
-console.log("~~~~~~~~~~~~~~~~~~~~~~");
+console.log("~~~~~~~~~~~~~~华丽的分割线~~~~~~~~~~~~~~~~~~~~~~~~~");
 // ES6 中 class 关键字 是实现面向对象编程新形式
 // 创建一个动物类
 class Animal {
@@ -32,15 +38,22 @@ class Animal {
     this.weight = weight;
     this.leg = leg;
   }
+
   // 在class 内部通过 static 修饰的属性就是【静态属性】
-  static info = "动物的描述信息";
+  static info = "动物的描述信息"; // 今后用的不多
+
+  // 这是动物的实例方法  【今后会经常用到】
+  sleep() {
+    console.log("动物的实例方法");
+  }
+  // static  静态方法
+  static show() {
+    console.log("动物的静态方法");
+  }
 }
 
 const a1 = new Animal("赤兔", 3, 174, 4);
 console.log(a1);
-console.log(a1.name); // 实例属性
-console.log(a1.age); // 实例属性
-console.log(a1.weight); // 实例属性
 
-// info 是 Animal 的静态属性
-console.log(Animal.info);
+a1.sleep(); // 实例方法
+Animal.show(); // 静态方法
