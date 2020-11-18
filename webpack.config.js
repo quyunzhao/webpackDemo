@@ -21,7 +21,10 @@ module.exports = {
         use: "babel-loader",
         exclude: /node_modules/, // 排除项, 千万不能忘记添加 exclude
       },
-      { test: /\.css$/, use: ["style-loader", "css-loader"] }, // 打包处理 CSS 样式表的第三方loader
+      // 在 css-loader 之后通过 ? 追加参数
+      // 其中有个固定的参数叫做 modules ，表示为普通的样式表，启用模块化
+      { test: /\.css$/, use: ["style-loader", "css-loader?modules"] }, // 打包处理 CSS 样式表的第三方loader
+      // { test: /\.jpg|png|gif|bmp$/, use: "url-loader" },
     ],
   },
   resolve: {
