@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "添加行内样式"
+git commit -m "第二次封装"
 
 git push
