@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "为普通样式表启用模块化"
+git commit -m "样式模块化配置"
 
 git push

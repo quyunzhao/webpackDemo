@@ -23,7 +23,20 @@ module.exports = {
       },
       // 在 css-loader 之后通过 ? 追加参数
       // 其中有个固定的参数叫做 modules ，表示为普通的样式表，启用模块化
-      { test: /\.css$/, use: ["style-loader", "css-loader?modules"] }, // 打包处理 CSS 样式表的第三方loader
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                localIdentName: "[path][name]-[local]--[hash:base64:5]",
+              },
+            },
+          },
+        ],
+      }, // 打包处理 CSS 样式表的第三方loader
       // { test: /\.jpg|png|gif|bmp$/, use: "url-loader" },
     ],
   },
