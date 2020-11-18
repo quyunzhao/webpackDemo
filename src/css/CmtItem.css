@@ -8,5 +8,5 @@
 }
 .cmtBox
 {
-    margin: 10px;  padding: 10px;  border: 1px dashed #ccc;
+    margin: 10px;  padding: 10px;  border: 1px dashed #ccc;  box-shadow: 0 0 10px #ccc;
 }
