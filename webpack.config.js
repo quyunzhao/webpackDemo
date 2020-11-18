@@ -19,8 +19,9 @@ module.exports = {
       {
         test: /\.js|jsx$/,
         use: "babel-loader",
-        exclude: /node_modules/, // 排除项, 千万不能忘记
+        exclude: /node_modules/, // 排除项, 千万不能忘记添加 exclude
       },
+      { test: /\.css$/, use: ["style-loader", "css-loader"] }, // 打包处理 CSS 样式表的第三方loader
     ],
   },
   resolve: {

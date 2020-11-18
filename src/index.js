@@ -5,7 +5,7 @@ import ReactDOM from "react-dom"; // 把创建好的 组件 和 虚拟DOM  放�
 // 导入 class
 // import Movie from "@/07-3.class-关键字创建React组件";
 // import CmtList from "@/07-4评论小练习";
-import CmtList from "@/components/CmtList";
+import CmtList from "@/components/CmtList2";
 
 //使用 ReactDOM  将虚拟DOM 渲染到页面上
 ReactDOM.render(

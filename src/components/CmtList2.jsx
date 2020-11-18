@@ -1,6 +1,10 @@
 import React from "react";
 
-import CmtItem from "@/components/CmtItem";
+// 导入样式表
+import cssobj from "@/css/CmtList.css";
+
+// 导入子组件
+import CmtItem from "@/components/CmtItem2";
 
 // 定义父组件
 class CmtList extends React.Component {
@@ -22,16 +26,8 @@ class CmtList extends React.Component {
   render() {
     return (
       <div>
-        <h1
-          style={{
-            color: "red",
-            fontSize: "35px",
-            fontWeight: 200,
-            textAlign: "center",
-          }}
-        >
-          这里是评论列表区
-        </h1>
+        <h1>这里是评论列表区</h1>
+
         {this.state.commentList.map((item) => (
           <CmtItem key={item.id} {...item}></CmtItem>
         ))}

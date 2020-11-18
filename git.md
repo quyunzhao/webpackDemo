@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "抽离为单独 js 样式文件"
+git commit -m "webpack 配置 css-loder"
 
 git push
