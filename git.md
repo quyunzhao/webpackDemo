@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "webpack 配置 css-loder"
+git commit -m "为普通样式表启用模块化"
 
 git push

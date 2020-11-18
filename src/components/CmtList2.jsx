@@ -1,7 +1,14 @@
 import React from "react";
 
 // 导入样式表
+// 直接导入的样式表，默认都是全局上的，整个项目都生效
+
+// vue 组件中的样式表有没有 “冲突问题”
+//  答：在 vue 中使用 <style scoped></style> 解决样式冲突
+// 疑问： React 中有没有类似 scoped 这样的指令呢
+//  答： 没有 ，因为在 React 中没有指令的概念
 import cssobj from "@/css/CmtList.css";
+console.log(cssobj);
 
 // 导入子组件
 import CmtItem from "@/components/CmtItem2";
@@ -26,7 +33,7 @@ class CmtList extends React.Component {
   render() {
     return (
       <div>
-        <h1>这里是评论列表区</h1>
+        <h1 className="title">这里是评论列表区</h1>
 
         {this.state.commentList.map((item) => (
           <CmtItem key={item.id} {...item}></CmtItem>
