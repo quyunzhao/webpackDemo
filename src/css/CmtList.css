@@ -1,6 +1,6 @@
 .title
 {
-    color: red;
+    text-align: center;  color: red;
 }
 
 /* css模块化只针对 类选择器 和 id 选择器生效 */
