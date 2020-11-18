@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "评论区实现小练习"
+git commit -m "抽离为单独文件"
 
 git push
