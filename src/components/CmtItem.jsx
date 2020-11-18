@@ -4,9 +4,16 @@ import React from "react";
 // 子组件
 function CmtItem(props) {
   return (
-    <div>
-      <h1>评论人：{props.user}</h1>
-      <h2>评论内容：{props.content}</h2>
+    <div
+      style={{
+        border: "1px dashed #ccc",
+        margin: "10px",
+        padding: "10px",
+        boxShadow: "0 0 10px #ccc",
+      }}
+    >
+      <h1 style={{ fontSize: "14px" }}>评论人：{props.user}</h1>
+      <h2 style={{ fontSize: "12px" }}>评论内容：{props.content}</h2>
       {/* <hr /> */}
     </div>
   );

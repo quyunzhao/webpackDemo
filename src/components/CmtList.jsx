@@ -22,7 +22,18 @@ class CmtList extends React.Component {
   render() {
     return (
       <div>
-        <h1>这里是评论列表区</h1>
+        {/* 如果想写行内样式不能写字符串 */}
+        {/* 而应该这么写  style = {{ color: red}} */}
+        <h1
+          style={{
+            color: "red",
+            fontSize: "35px",
+            fontWeight: 200,
+            textAlign: "center",
+          }}
+        >
+          这里是评论列表区
+        </h1>
         {this.state.commentList.map((item) => (
           <CmtItem key={item.id} {...item}></CmtItem>
         ))}
