@@ -1,0 +1,12 @@
+.title
+{
+    font-size: 14px;
+}
+.content
+{
+    font-size: 12px;
+}
+.cmtBox
+{
+    margin: 10px;  padding: 10px;  border: 1px dashed #ccc;
+}

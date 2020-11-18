@@ -3,7 +3,9 @@
     color: red;
 }
 
-h1
+/* css模块化只针对 类选择器 和 id 选择器生效 */
+/* Css 模块化 不会将标签选择器模块化 */
+/* h1
 {
     font-style: italic;
-}
+} */

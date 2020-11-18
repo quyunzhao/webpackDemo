@@ -33,7 +33,7 @@ class CmtList extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="title">这里是评论列表区</h1>
+        <h1 className={cssobj.title}>这里是评论列表区</h1>
 
         {this.state.commentList.map((item) => (
           <CmtItem key={item.id} {...item}></CmtItem>
