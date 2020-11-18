@@ -1,32 +1,37 @@
 import React from "react";
 
-// 第一次封装
-const itemStyle = {
-  border: "1px dashed #ccc",
-  margin: "10px",
-  padding: "10px",
-  boxShadow: "0 0 10px #ccc",
-};
+// 第一次封装 将样式表与 UI 结构分离
+// const itemStyle = {
+//   border: "1px dashed #ccc",
+//   margin: "10px",
+//   padding: "10px",
+//   boxShadow: "0 0 10px #ccc",
+// };
 
-const userStyle = {
-  fontSize: "14px",
-};
+// const userStyle = {
+//   fontSize: "14px",
+// };
 
-const contentStyle = {
-  fontSize: "12px",
-};
+// const contentStyle = {
+//   fontSize: "12px",
+// };
 
-// 第二层封装样式
-const style = {
-  item: {
-    border: "1px dashed #ccc",
-    margin: "10px",
-    padding: "10px",
-    boxShadow: "0 0 10px #ccc",
-  },
-  user: { fontSize: "14px" },
-  content: { fontSize: "12px" },
-};
+// 第二层封装样式 合并成一个大的样式文件
+// const style = {
+//   item: {
+//     border: "1px dashed #ccc",
+//     margin: "10px",
+//     padding: "10px",
+//     boxShadow: "0 0 10px #ccc",
+//   },
+//   user: { fontSize: "14px" },
+//   content: { fontSize: "12px" },
+// };
+
+// 第三次 抽离为单独的样式表 模块
+// 导入样式文件
+import style from "@/components/styles";
+console.log(style);
 
 // 使用 function 定义普通的无状态组件
 // 子组件
