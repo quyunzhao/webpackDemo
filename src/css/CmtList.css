@@ -1,3 +1,9 @@
+/* 注意 被 :local() 包裹起来的类名，会被模块化；默认情况下所以的 类名 和 Id ，都被模块化了 */
+/* :local(.title)
+{
+    font-weight: 200;  text-align: center;  color: red;
+} */
+
 .title
 {
     font-weight: 200;  text-align: center;  color: red;
@@ -9,3 +15,9 @@
 {
     font-style: italic;
 } */
+
+/* 被 :global() 包裹起来的不会被模块化 */
+:global(.test)
+{
+    font-style: italic;
+}
