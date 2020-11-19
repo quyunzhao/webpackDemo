@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "样式模块化配置 global 和 local"
+git commit -m "配置第三方样式"
 
 git push

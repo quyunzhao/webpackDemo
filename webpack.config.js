@@ -27,6 +27,16 @@ module.exports = {
         test: /\.css$/,
         use: [
           "style-loader",
+          // {
+          "css-loader",
+          // },
+        ],
+      }, // 打包处理 CSS 样式表的第三方loader
+      {
+        test: /\.scss$/,
+        use: [
+          "style-loader",
+          // "css-loader",
           {
             loader: "css-loader",
             options: {
@@ -35,8 +45,11 @@ module.exports = {
               },
             },
           },
+          "sass-loader",
         ],
-      }, // 打包处理 CSS 样式表的第三方loader
+      }, // 打包处理scss文件的 loader
+
+      { test: /\.ttf|woff|woff2|eot|svg$/, use: "url-loader" }, // 打包处理字体文件的 loader
       // { test: /\.jpg|png|gif|bmp$/, use: "url-loader" },
     ],
   },
