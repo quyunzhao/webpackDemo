@@ -8,6 +8,7 @@ import React from "react";
 // 疑问： React 中有没有类似 scoped 这样的指令呢
 //  答： 没有 ，因为在 React 中没有指令的概念
 import cssobj from "@/css/CmtList.scss";
+console.log("这个是CmtList.scss：");
 console.log(cssobj);
 
 // 导入第三方样式表
@@ -15,8 +16,10 @@ console.log(cssobj);
 //  则： 可以省略 node_modules 这一层目录，直接以包名开始引入自己的 模块 或 样式表
 // 自己规定： 第三方 的样式表都是以 .css 结尾 这样我们不要为普通的 .css 启用模块化
 //    自己的样式表，都要以 .scss 或 .less 结尾，只为 .scss 和 .less 文件启用模块化
-import bootstrap from "bootstrap/dist/css/bootstrap.min.css";
-console.log(bootstrap);
+// import bootstrap from "bootstrap/dist/css/bootstrap.min.css";
+// console.log("这个是bootstrap.min.css：");
+// console.log(bootstrap);
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // 导入子组件
 import CmtItem from "@/components/CmtItem2";

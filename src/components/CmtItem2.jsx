@@ -1,6 +1,7 @@
 import React from "react";
 
 import cssobj from "@/css/CmtItem.scss";
+console.log("这个是CmtItem.scss：");
 console.log(cssobj);
 // 使用 function 定义普通的无状态组件
 // 子组件
