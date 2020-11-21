@@ -6,6 +6,8 @@ export default class BindEvent extends React.Component {
     // 私有数据
     this.state = {
       msg: "哈哈哈哈",
+      name: "zs",
+      age: 22,
     };
   }
 
@@ -26,8 +28,12 @@ export default class BindEvent extends React.Component {
     // this.state.msg = arg2;
 
     // 在 React 中推荐使用 this.setState({ }) 修改状态值
-    this.setState({ msg: arg2 });
+    // 只会把对应的 state 更新，而不会 覆盖其他的 state 状态
+    this.setState({ msg: arg2 }, function () {
+      console.log(this.state.msg);
+    });
 
-    console.log("show方法被调用了" + arg1 + arg2);
+    // 注意 this.setState 是异步的
+    // 如果想拿到最新的 this.state 值，需要使用 this.setState({ },callback)
   };
 }
