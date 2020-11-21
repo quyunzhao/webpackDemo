@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "配置第三方样式"
+git commit -m "绑定事件"
 
 git push
