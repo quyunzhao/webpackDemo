@@ -3,6 +3,7 @@ import React from "react";
 export default class BindEvent extends React.Component {
   constructor() {
     super();
+    this.myRef = React.createRef();
     // 私有数据
     this.state = {
       msg: "哈哈哈哈",
@@ -30,6 +31,7 @@ export default class BindEvent extends React.Component {
           style={{ width: "100%" }}
           value={this.state.msg}
           onChange={(e) => this.textChanged(e)}
+          ref={this.myRef}
         />
       </div>
     );
@@ -37,13 +39,19 @@ export default class BindEvent extends React.Component {
 
   textChanged = (e) => {
     // console.log("文本变化了");
-    const textValue = e.target.value;
     // 在 onChange 事件中
     // 获取文本框的值有两种方法
     // 方案1：通过 事件参数 e 来获取
+    // const textValue = e.target.value;
     // console.log(textValue);
+    // this.setState({ msg: textValue }, function () {
+    //   console.log(this.state.msg);
+    // });
 
-    this.setState({ msg: textValue }, function () {
+    // 方法2：通过 ref
+    const textValue2 = this.myRef.current.value;
+    // console.log(textValue2);
+    this.setState({ msg: textValue2 }, function () {
       console.log(this.state.msg);
     });
   };
