@@ -28,6 +28,7 @@ export default class BindEvent extends React.Component {
       </div>
     );
   }
+
   // 这是一个实例方法
   myClickHandler = () => {
     console.log("okkkkk");
