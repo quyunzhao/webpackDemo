@@ -29,7 +29,7 @@ export default class BindEvent extends React.Component {
     );
   }
   // 这是一个实例方法
-  myClickHandler() {
+  myClickHandler = () => {
     console.log("okkkkk");
-  }
+  };
 }

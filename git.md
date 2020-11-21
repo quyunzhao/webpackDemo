@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "绑定事件 2.0"
+git commit -m "使用 this.setState 修改数据"
 
 git push
