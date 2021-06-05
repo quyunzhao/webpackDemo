@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "绑定文本框的值方法 er"
+git commit -m "组件的生命周期"
 
 git push
