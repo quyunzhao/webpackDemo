@@ -4,7 +4,6 @@
   "description": "",
   "private": true,
   "sideEffects": false,
-  "type": "module",
   "devDependencies": {
     "fork-ts-checker-notifier-webpack-plugin": "^7.0.0",
     "fork-ts-checker-webpack-plugin": "^8.0.0",
