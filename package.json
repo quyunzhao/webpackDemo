@@ -5,6 +5,7 @@
   "private": true,
   "sideEffects": false,
   "devDependencies": {
+    "exports-loader": "^4.0.0",
     "fork-ts-checker-notifier-webpack-plugin": "^7.0.0",
     "fork-ts-checker-webpack-plugin": "^8.0.0",
     "html-webpack-plugin": "^5.5.1",
