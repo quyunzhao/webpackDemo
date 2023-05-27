@@ -25,4 +25,8 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+  // 如果我们要在一个 HTML 页面上使用多个入口时，还需设置 optimization.runtimeChunk: 'single'
+  optimization: {
+    runtimeChunk: "single",
+  },
 };
