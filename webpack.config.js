@@ -4,10 +4,6 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = (env) => {
-  // Use env.<YOUR VARIABLE> here:
-  console.log("Goal: ", env.goal); // 'local'
-  console.log("Production: ", env.production); // true
-
   return {
     mode: "development",
     entry: "./src/index.ts",
