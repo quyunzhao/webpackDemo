@@ -2,7 +2,8 @@
   "name": "webpack_demo",
   "version": "1.0.0",
   "description": "",
-  "private": true,
+  "private": true, 
+  "sideEffects": false,
   "devDependencies": {
     "fork-ts-checker-notifier-webpack-plugin": "^7.0.0",
     "fork-ts-checker-webpack-plugin": "^8.0.0",

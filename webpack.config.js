@@ -5,11 +5,7 @@ module.exports = {
   entry: {
     app: "./src/index.js",
   },
-  devtool: "inline-source-map",
-  devServer: {
-    static: "./dist",
-    hot: true,
-  },
+  mode: "production",
   plugins: [
     new HtmlWebpackPlugin({
       title: "Hot Module Replacement",
