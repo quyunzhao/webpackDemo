@@ -5,10 +5,9 @@ module.exports = {
   entry: {
     app: "./src/index.js",
   },
-  mode: "production",
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Hot Module Replacement",
+      title: "Production",
     }),
   ],
   output: {
