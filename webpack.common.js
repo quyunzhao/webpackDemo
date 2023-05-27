@@ -11,6 +11,14 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+  module: {
+    rules: [
+      {
+        test: require.resolve("./src/index.js"),
+        use: "imports-loader?wrapper=window",
+      },
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: "Production",

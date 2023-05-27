@@ -8,6 +8,7 @@
     "fork-ts-checker-notifier-webpack-plugin": "^7.0.0",
     "fork-ts-checker-webpack-plugin": "^8.0.0",
     "html-webpack-plugin": "^5.5.1",
+    "imports-loader": "^4.0.1",
     "ts-loader": "^9.4.3",
     "webpack": "^5.84.1",
     "webpack-cli": "^5.1.1",
