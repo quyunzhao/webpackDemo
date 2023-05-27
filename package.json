@@ -32,6 +32,8 @@
   },
   "homepage": "https://github.com/qjgetword/webpackDemo#readme",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "babel-polyfill": "^6.26.0",
+    "lodash": "^4.17.21",
+    "whatwg-fetch": "^3.6.2"
   }
 }
