@@ -59,9 +59,9 @@ module.exports = {
     },
   },
 };
-// webpack-dev-server 打包好的main.js在内存中
-// 不行   这是ES6的导出API  与之对应的是 import ** from “标识符”
-// export default{}
+// webpack-dev-server 打包好的 main.js 在内存中
+// 不行   这是 ES6 的导出 API  与之对应的是 import ** from “标识符”
+// export default {}
 
-// 那些Node支持
-// chrome浏览器 支持就都支持
+// 那些 Node 支持
+// chrome 浏览器 支持就都支持
