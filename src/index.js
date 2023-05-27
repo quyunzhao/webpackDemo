@@ -1,14 +1,15 @@
-import _ from "lodash";
+function getComponent() {
+  return import("lodash")
+    .then(({ default: _ }) => {
+      const element = document.createElement("div");
 
-function component() {
-  const element = document.createElement("div");
+      element.innerHTML = _.join(["Hello", "webpack"], " ");
 
-  // lodash 在当前 script 中使用 import 引入
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
-
-  element.appendChild(btn);
-
-  return element;
+      return element;
+    })
+    .catch((error) => "An error occurred while loading the component");
 }
 
-document.body.appendChild(component());
+getComponent().then((component) => {
+  document.body.appendChild(component);
+});
