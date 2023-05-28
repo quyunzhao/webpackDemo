@@ -11,9 +11,9 @@ const ModuleFederationPlugin =
 
 module.exports = {
   entry: {
-    // index: "./src/index.ts",
-    home: ["./src/home.js", "./src/home.scss"],
-    account: ["./src/account.js", "./src/account.scss"],
+    index: "./src/index.ts",
+    // home: ["./src/home.js", "./src/home.scss"],
+    // account: ["./src/account.js", "./src/account.scss"],
   },
   resolve: {
     // 文件扩展名来解析，此选项会告诉解析器在解析中能够接受那些扩展名（例如 .js，.jsx）。
@@ -62,6 +62,7 @@ module.exports = {
     }),
     new ModuleFederationPlugin({
       name: "host",
+      filename: "remoteEntry.js",
       remotes: {
         app1: `promise new Promise(resolve => {
           const urlParams = new URLSearchParams(window.location.search)
@@ -89,6 +90,10 @@ module.exports = {
           document.head.appendChild(script);
         })
         `,
+      },
+      exposes: {
+        home: "./src/home",
+        account: "./src/account",
       },
     }),
   ],
