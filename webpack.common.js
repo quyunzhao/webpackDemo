@@ -12,10 +12,12 @@ module.exports = {
     account: ["./src/account.js", "./src/account.scss"],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    // 文件扩展名来解析，此选项会告诉解析器在解析中能够接受那些扩展名（例如 .js，.jsx）。
+    extensions: [".tsx", ".ts", ".jsx", ".js"],
   },
   module: {
     rules: [
+      { test: /\.css$/, use: "css-loader" },
       {
         test: /\.scss$/,
         use: [
@@ -23,7 +25,12 @@ module.exports = {
           process.env.NODE_ENV !== "production"
             ? "style-loader"
             : MiniCssExtractPlugin.loader,
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+            },
+          },
           "sass-loader",
         ],
       },
@@ -39,7 +46,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: "./src/index.html" }),
+    // new HtmlWebpackPlugin({ template: "./src/index.html" }),
     // new WorkboxPlugin.GenerateSW({
     //   // 这些选项帮助快速启用 ServiceWorkers
     //   // 不允许遗留任何“旧的” ServiceWorkers
